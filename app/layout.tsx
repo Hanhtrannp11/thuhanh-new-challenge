@@ -22,11 +22,12 @@ export default function RootLayout({
           <h1>Thu Hanh</h1>
 
           <div style={{ display: "flex", gap: "20px" }}>
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/training">Training</Link>
-          </div>
-        </div>
+  <Link href="/">Home</Link>
+  <Link href="/about">About</Link>
+  <Link href="/training">Training</Link>
+  <Link href="/practices">Practices</Link>
+  <Link href="/plans">Plans</Link>
+</div>
 
         <main style={{ padding: "40px" }}>{children}</main>
 
