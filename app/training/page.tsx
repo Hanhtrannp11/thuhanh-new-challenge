@@ -1,66 +1,76 @@
 const data = [
   {
-    date: "Day 1",
+    date: "Mar 26, 2026",
     title: "Started Learning Testing",
     content: [
       "Learned what is testing",
-      "Understood basic concepts"
+      "Understood basic concepts",
     ],
   },
   {
-    date: "Day 2",
+    date: "Mar 27, 2026",
     title: "HTML Basics",
     content: [
-      "Learned basic tags",
-      "Built first simple page"
+      "Learned HTML structure",
+      "Built first simple page",
     ],
   },
 ];
 
 export default function Training() {
   return (
-    <div style={{ display: "flex" }}>
-
-      {/* TIMELINE LEFT */}
-      <div style={{
-        width: "25%",
-        borderRight: "1px solid #ddd",
-        position: "relative",
-        paddingRight: "20px"
-      }}>
-        <div style={{
-          position: "absolute",
-          left: "10px",
-          top: 0,
-          bottom: 0,
-          width: "2px",
-          background: "#ccc"
-        }} />
+    <div style={{ display: "flex", gap: "60px" }}>
+      
+      {/* LEFT TIMELINE */}
+      <div style={{ width: "200px", position: "relative" }}>
+        <div
+          style={{
+            position: "absolute",
+            left: "5px",
+            top: 0,
+            bottom: 0,
+            width: "1px",
+            background: "#e5e5e5",
+          }}
+        />
 
         {data.map((item, i) => (
-          <div key={i} style={{ marginBottom: "30px", paddingLeft: "20px", position: "relative" }}>
-            <div style={{
-              position: "absolute",
-              left: "-3px",
-              top: "5px",
-              width: "10px",
-              height: "10px",
-              background: "black",
-              borderRadius: "50%"
-            }} />
-            <p style={{ fontSize: "12px", color: "#777" }}>{item.date}</p>
+          <div key={i} style={{ marginBottom: "40px", position: "relative" }}>
+            <div
+              style={{
+                position: "absolute",
+                left: "0px",
+                top: "6px",
+                width: "10px",
+                height: "10px",
+                background: "#111",
+                borderRadius: "50%",
+              }}
+            />
+            <p style={{ marginLeft: "20px", fontSize: "12px", color: "#999" }}>
+              {item.date}
+            </p>
           </div>
         ))}
       </div>
 
-      {/* CONTENT RIGHT */}
-      <div style={{ width: "75%", paddingLeft: "30px" }}>
-        <h2>Training Journey</h2>
+      {/* RIGHT CONTENT */}
+      <div style={{ flex: 1 }}>
+        <h2 style={{ fontWeight: 500, marginBottom: "30px" }}>
+          Training
+        </h2>
 
         {data.map((item, i) => (
-          <div key={i} style={{ marginBottom: "30px" }}>
-            <h3>{item.title}</h3>
-            <ul>
+          <div key={i} style={{ marginBottom: "50px" }}>
+            <h3 style={{ fontWeight: 500 }}>{item.title}</h3>
+
+            <ul
+              style={{
+                marginTop: "10px",
+                paddingLeft: "20px",
+                color: "#555",
+              }}
+            >
               {item.content.map((c, idx) => (
                 <li key={idx}>{c}</li>
               ))}
