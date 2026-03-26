@@ -1,16 +1,24 @@
 import Link from "next/link";
+import React from "react";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html>
+    <html lang="en">
       <body style={{ fontFamily: "sans-serif" }}>
 
-        <div style={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: "20px",
-          borderBottom: "1px solid #ddd"
-        }}>
+        {/* NAVBAR */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "20px",
+            borderBottom: "1px solid #ddd",
+          }}
+        >
           <h1>Thu Hanh</h1>
 
           <div style={{ display: "flex", gap: "20px" }}>
@@ -19,9 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </div>
 
-        <main style={{ padding: "40px" }}>
-          {children}
-        </main>
+        <main style={{ padding: "40px" }}>{children}</main>
 
       </body>
     </html>
