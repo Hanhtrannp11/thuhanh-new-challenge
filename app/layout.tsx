@@ -10,10 +10,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         style={{
-          fontFamily: "sans-serif",
-          maxWidth: "1000px",
+          fontFamily: "-apple-system, BlinkMacSystemFont, sans-serif",
+          maxWidth: "1100px",
           margin: "0 auto",
-          color: "#333",
+          color: "#1a1a1a",
+          background: "#fff",
         }}
       >
         {/* NAVBAR */}
@@ -22,15 +23,15 @@ export default function RootLayout({
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            padding: "20px 0",
-            borderBottom: "1px solid #eee",
+            padding: "30px 0",
+            borderBottom: "1px solid #f0f0f0",
           }}
         >
           <h1
             style={{
-              letterSpacing: "4px",
+              letterSpacing: "6px",
               fontWeight: 300,
-              fontSize: "18px",
+              fontSize: "16px",
             }}
           >
             Thu Hanh
@@ -39,9 +40,9 @@ export default function RootLayout({
           <div
             style={{
               display: "flex",
-              gap: "25px",
-              fontSize: "14px",
-              color: "#777",
+              gap: "30px",
+              fontSize: "13px",
+              color: "#888",
             }}
           >
             <Link href="/">Home</Link>
@@ -53,7 +54,12 @@ export default function RootLayout({
         </div>
 
         {/* CONTENT */}
-        <main style={{ padding: "40px 0", lineHeight: "1.6" }}>
+        <main
+          style={{
+            padding: "60px 0",
+            lineHeight: "1.8",
+          }}
+        >
           {children}
         </main>
       </body>
